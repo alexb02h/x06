@@ -1,26 +1,26 @@
 name: C++ CI
 
 on:
-	push:
-		branches:
-			-main
+ push:
+  branches:
+    -main
 
 jobs:
-	build:
-		runs-on: ubuntu-latest
+ build:
+  runs-on: ubuntu-latest
 
-		steps:
-		-name: Checkout code
-		 uses: actions/checkout@v3
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v3
 
-		-name: Install dependencies
-		 run: sudo apt-get install -t g++ make
+  - name: Install dependencies
+    run: sudo apt-get install -t g++ make
 
-		-name: Build
-		 run: |
-		  g++ -o hello .main.cpp
-		  ./hello
+  - name: Build
+    run: |
+     g++ -o hello .main.cpp
+     ./hello
 
-		-name: Test
-		 run: |
-		  echo "No Tests"
+  -name: Test
+   run: |
+    echo "No Tests"
