@@ -21,6 +21,6 @@ jobs:
      g++ -o hello .main.cpp
      ./hello
 
-  -name: Test
-   run: |
-    echo "No Tests"
+  - name: Test
+    run: |
+     echo "No Tests"
